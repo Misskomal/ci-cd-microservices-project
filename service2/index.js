@@ -1,0 +1,17 @@
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Service 2 is running 🚀");
+});
+
+app.get("/api", (req, res) => {
+  res.json({
+    service: "Service 2",
+    status: "Running Successfully"
+  });
+});
+
+app.listen(3002, () => {
+  console.log("Service 2 running on port 3002");
+});
